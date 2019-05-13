@@ -1,0 +1,140 @@
+paste("apple", "pie")
+paste("apple", "pie", sep")
+paste("apple", "pie", sep"")
+paste("apple", "pie", sep="")
+paste("apple", "pie", sep="00000")
+data = c()
+values = 1:20
+data
+data <- c()
+values <- 1:20
+values
+new <- c(data, values)
+new
+more <- 1:5
+update <- c(new, more)
+update
+update <- sum(new, more)
+update
+directory = specdata
+directory <- "specdata"
+path <- paste(getwd(), "/", directory, "/", sep = "")
+path
+library(datasets)
+data(iris)
+?iris
+iris
+lapply(iris[, iris$virginica], mean, sepal.width)
+sapply(iris, mean, sepal.width)
+sapply(iris, mean)
+sapply(iris$sepal.width, mean)
+sapply(iris[, iris$Sepal.Length], mean)
+class(iris)
+iris$Sepal.Length
+sapply(iris[iris$Sepal.Length,], mean)
+sapply(iris[iris$Sepal.Length, ], mean)
+sapply(iris[, iris$Sepal.Length], mean)
+sapply(iris(iris[, iris$Sepal.Length]), mean)
+sapply(iris, mean)
+sapply(iris[, iris$Species], mean, Sepal.Length)
+library(datasets)
+datasets(iris)
+data(iris)
+iris[iris$Sepal.Length]
+iris[iris$Sepal.Length, ]
+iris[, iris$Sepal.Length]
+split(iris$Sepal.Length)
+library(swirl)
+swirl()
+sapply(flags, unique)
+vapply(flags, unique, numeric(1))
+ok()
+sapply(flags, class)
+vapply(flags, class, character(1))
+?tapply
+table(flags$landmass)
+table(flags$animate)
+tapply(flags$animate, flags$landmass, mean)
+tapply(flags$population, flags$red, summary)
+tapply(flags$population, flags$landmass, summary)
+matrix(1,2)
+matrix(1:20, 5, 4)
+x <- matrix(1:20, 5, 4)
+solve(x)
+x <- matrix(1:16, 4, 4)
+solve(x)
+runif(10, 5, 10)
+x
+solve(x)
+x <- matrix(runif(16, 0, 1), 4, 4)
+x
+solve(x)
+x = matrix()
+x
+makeVector <- function(x = matrix()) {#
+    m <- NULL#
+    set <- function(y) {#
+        x <<- y#
+        m <<- NULL#
+    }#
+    get <- function() x#
+    setmean <- function(mean) m <<- mean#
+    getmean <- function() m#
+    list(set = set, get = get,#
+         setmean = setmean,#
+         getmean = getmean)#
+}
+makeVector(1)
+install.packages("xlsx")
+library("xlsx")
+library(xlsx)
+dyn.load
+install.packages("rJava")
+library(httr)
+oauth_endpoints("github")
+myapp <- oauth_app("github",#
+  key = "31e22a56fd41b78c9d64",#
+  secret = "8b13a47a50ca11948ddbb9996c5adb6d4d217770"#
+)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/rate_limit", gtoken)
+stop_for_status(req)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+content(req)
+mtcars
+mtcars[13, .(cyl)]
+library(data.table)
+mtcars[13, .(cyl)]
+as.data.table(mtcars)
+mtcars[13, .(cyl)]
+list(1:4)
+list(1:4) ->
+x
+mean(x)
+as.vector(x)
+mean(x)
+library(data.table)
+as.data.table(mtcars)
+as.data.table(mtcars) -> x
+x[,.(cyl)]
+x[,.(cyl, disp, mpg)]
+x[.(cyl, )]
+x[.(cyl),]
+x[2,]
+x[,(cyl, disp, mpg)]
+x[, cyl]
+x[, c(cyl)]
+x[,.(cyl)] -> y
+class(y)
+x[,(cyl, disp, mpg)] -> z
+x[,.(cyl, disp, mpg)] -> z
+class(z)
+x[, c(cyl)] -> a
+class(a)
+setwd("./R")
+getwd()
+setwd("/Desktop/R")
+setwd("/Desktop/R")
+setwd("/Users/Nathan/Desktop/R/CleaningData/UCI HAR Dataset")
+dir()
